@@ -4,7 +4,8 @@ Dynamic content engine for time and url based injection
 
 ## Example config object
 
-```var config = {
+```javascript
+var config = {
     0:{
         content: "<a href='#'>test link</a>",
         location: ["index.html"],
