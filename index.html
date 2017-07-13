@@ -1,0 +1,48 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class='content'>
+
+<div class='oldContent'></div>
+<div class='moreContent'></div>
+</div>
+
+<script>
+
+var iceConfig = {
+
+    0:{
+        content: "<a href='#'>test link</a>",
+        location: ["index.html"],
+        time: {
+            begin: [10, 27],
+            end: [24, 60],
+        },
+        days: ['Thursday', 'Monday'],
+        target: ['append', '.moreContent'],
+        callback: function(){
+            console.log('callback for 0');
+        }
+    },
+    
+    1:{
+        content: "<a href='#'>test link 2</a>",
+        location: ["index.html"],
+        time: {
+            begin: [10, 27],
+            end: [24, 60],
+        },
+        days: ['Thursday', 'Monday'],
+        target: ['after', '.moreContent'],
+        callback: function(){
+            console.log('callback for 1');
+        }
+    },
+
+}
+
+</script>
+<script src='contentEngine.js'></script>
+<script>
+iceInjector.init(nextDayConfig);
+</script>
+</html>
